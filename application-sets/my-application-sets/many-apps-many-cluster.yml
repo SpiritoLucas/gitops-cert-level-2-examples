@@ -20,8 +20,9 @@ spec:
                 matchLabels:
                   argocd.argoproj.io/secret-type: cluster
   template:
-    #metadata:
-    #  name: '{{path.basename}}-{{name}}'
+    metadata:
+      name: default
+      #name: '{{path.basename}}-{{name}}'
     spec:
       project: 'default'
       source:
