@@ -20,8 +20,8 @@ spec:
                 matchLabels:
                   argocd.argoproj.io/secret-type: cluster
   template:
-    metadata:
-      name: '{{path.basename}}-{{name}}'
+    #metadata:
+    #  name: '{{path.basename}}-{{name}}'
     spec:
       project: 'default'
       source:
@@ -30,7 +30,7 @@ spec:
         path: '{{path}}'
       destination:
         server: '{{server}}'
-        namespace: default
+        namespace: '{{path.basename}}'
        # Sync policy
       syncPolicy:
         syncOptions:
