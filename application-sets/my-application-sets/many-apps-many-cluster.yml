@@ -21,7 +21,7 @@ spec:
                   #argocd.argoproj.io/secret-type: cluster
   template:
     metadata:
-      name: '{{path.basename}}-{{name}}'
+      name: '{{path}}-{{name}}'
     spec:
       project: 'default'
       source:
