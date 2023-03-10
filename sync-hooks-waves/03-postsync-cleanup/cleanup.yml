@@ -1,12 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
+  name: job1
   namespace: example03
   generateName: cleanup-after-sync-
   labels:
     codefresh.io/cert: cleanup-job
   annotations:
-    argocd.argoproj.io/hook: PostSync
+      argocd.argoproj.io/hook: PostSync
 spec:
   template:
     spec:

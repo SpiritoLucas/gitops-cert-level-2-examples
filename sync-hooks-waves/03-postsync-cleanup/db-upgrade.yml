@@ -1,6 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
+  name: job2
   namespace: example03
   generateName: my-db-upgrade-
   annotations:
